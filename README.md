@@ -23,6 +23,7 @@ The D435i & T265 cameras allow to perform SLAM (mapping and localization) To per
 - **robot_localization:** ```sudo apt-get install ros-kinetic-robot-localization```.
 
 ## Configuration:
+Now with all the packages installed, changes must be made so that SLAM can work correctly with both cameras.
 
 ### Rviz:
 
