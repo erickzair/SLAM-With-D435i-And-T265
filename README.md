@@ -28,6 +28,11 @@ Now with all the packages installed, changes must be made so that SLAM can work 
 ### Rviz:
 
 ### Mounting:
+![WhatsApp Image 2022-11-01 at 4 55 19 PM](https://user-images.githubusercontent.com/72427631/199349398-6d90fa47-6077-4862-a1e4-9969ef8fb596.jpeg)
+
+
+
+
 
 ### Saving:
 
