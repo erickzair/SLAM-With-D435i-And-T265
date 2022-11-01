@@ -1,0 +1,45 @@
+1. If you have the problem:
+
+CMake Error at /opt/ros/melodic/share/catkin/cmake/catkinConfig.cmake:83 (find_package):
+  Could not find a package configuration file provided by
+  "ddynamic_reconfigure" with any of the following names:
+
+    ddynamic_reconfigureConfig.cmake
+    ddynamic_reconfigure-config.cmake
+
+  Add the installation prefix of "ddynamic_reconfigure" to CMAKE_PREFIX_PATH
+  or set "ddynamic_reconfigure_DIR" to a directory containing one of the
+  above files.  If "ddynamic_reconfigure" provides a separate development
+  package or SDK, be sure it has been installed.
+
+You can solve this with the next line in terminal:
+
+sudo apt-get install ros-melodic-ddynamic-reconfigure
+
+And if you are using another version of ROS you can try to change the version word, for example:
+
+sudo apt-get install ros-kinetic-ddynamic-reconfigure
+
+
+2. To resolve issue:
+ 
+Using realsense d435i ubuntu 18.04 and ros melodic, if you can see the image in realsense-viewer but you can't see any on rviz and present the next msg:
+
+23/04 18:13:47,017 WARNING [140493716674304] (messenger-libusb.cpp:42) control_transfer returned error, index: 768, error: Resource temporarily unavailable, number: 11
+
+You can solve it changing the <arg name="pointcloud_texture_stream" default="RS_STREAM_COLOR"/> for <arg name="pointcloud_texture_stream" default="RS_STREAM_ANY"/>
+
+in the directory:
+/opt/ros/melodic/share/realsense2_camera/launch/rs_camera.launch
+
+The solution was found in:
+
+First ticket:
+https://github.com/IntelRealSense/realsense-ros/issues/1663
+
+Second ticket:
+https://github.com/IntelRealSense/realsense-ros/issues/1758
+
+You can modify it with:
+sudo gedit /opt/ros/melodic/share/realsense2_camera/launch/rs_camera.launch
+
