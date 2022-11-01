@@ -26,7 +26,8 @@ The D435i & T265 cameras allow to perform SLAM (mapping and localization) To per
 Now with all the packages installed, changes must be made so that SLAM can work correctly with both cameras.
 
 ### Rviz:
-First you must change the permissions of the folder of the path `/opt/ros/melodic/share/rtabmap_ros/launch/` and here with the command `sudo chmod 775 config`
+First you must change the permissions of the folder `config` of the path `/opt/ros/melodic/share/rtabmap_ros/launch/`.
+Can be done with the command `sudo chmod 777 config` and now inside of the path `/opt/ros/melodic/share/rtabmap_ros/launch/config/`
 
 
 ### Mounting:
