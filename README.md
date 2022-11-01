@@ -5,7 +5,7 @@ SLAM 3D With RealSense™ Cameras D435i &amp; T265
 This tutorial is based on the melodic ROS1 distribution for ubuntu 18.04 LTS
 (it is compatible with all distributions of ROS1 with small changes).
 
-- ⚙️ To find out what version of Ubuntu you have, use: `lsb_release -a
+- ⚙️ To find out what version of Ubuntu you have, use: `lsb_release -a`
 and to find out what distribution of ROS you have, use: `rosversion -d`
 
 If you don't have a ROS1 distribution you can install it through the following links:
