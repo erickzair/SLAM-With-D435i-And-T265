@@ -44,7 +44,7 @@ You can modify it with:
 sudo gedit /opt/ros/melodic/share/realsense2_camera/launch/rs_camera.launch
 
 To install gedit:
-`sudo apt install gedit`
+```sudo apt install gedit```
 
 3. Si solo extrae la nube de puntos del mapa actual pero no mapea:
  If only extract pointcloud bat not mapping
