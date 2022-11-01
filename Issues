@@ -14,7 +14,7 @@ CMake Error at /opt/ros/melodic/share/catkin/cmake/catkinConfig.cmake:83 (find_p
 
 You can solve this with the next line in terminal:
 
-sudo apt-get install ros-melodic-ddynamic-reconfigure
+`sudo apt-get install ros-melodic-ddynamic-reconfigure`
 
 And if you are using another version of ROS you can try to change the version word, for example:
 
