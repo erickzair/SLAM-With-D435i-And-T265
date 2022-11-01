@@ -43,3 +43,23 @@ https://github.com/IntelRealSense/realsense-ros/issues/1758
 You can modify it with:
 sudo gedit /opt/ros/melodic/share/realsense2_camera/launch/rs_camera.launch
 
+To install gedit:
+`sudo apt install gedit`
+
+3. Si solo extrae la nube de puntos del mapa actual pero no mapea:
+ If only extract pointcloud bat not mapping
+
+Se debe ir a catkin_ws/src/realsense-ros/realsense2_camera/launch
+
+Abrir desde terminal y sudo gedit opensource_tracking.launch
+
+Cambiar la linea: <arg name="args" value="--delete_db_on_start"/>
+
+Por:
+<arg name="args" value="--delete_db_on_start --RGBD/LoopClosureReextractFeatures true --Vis/MinIniliers 10"/>
+
+4. [ERROR] [1663441379.166610446]: PluginlibFactory: The plugin for class 'octomap_rviz_plugin/ColorOccupancyGrid' failed to load.  Error: According to the loaded plugin descriptions the class octomap_rviz_plugin/ColorOccupancyGrid with base class type rviz::Display does not exist. Declared types are  rtabmap_ros/Info rtabmap_ros/MapCloud rtabmap_ros/MapGraph rviz/Axes rviz/Camera rviz/DepthCloud rviz/Effort rviz/FluidPressure rviz/Grid rviz/GridCells rviz/Illuminance rviz/Image rviz/InteractiveMarkers rviz/LaserScan rviz/Map rviz/Marker rviz/MarkerArray rviz/Odometry rviz/Path rviz/PointCloud rviz/PointCloud2 rviz/PointStamped rviz/Polygon rviz/Pose rviz/PoseArray rviz/PoseWithCovariance rviz/Range rviz/RelativeHumidity rviz/RobotModel rviz/TF rviz/Temperature rviz/WrenchStamped rviz_plugin_tutorials/Imu
+
+Para solucionar este error se debe instalar octomap rviz plugins, de la siguiente forma:
+sudo apt-get install ros-kinetic-octomap-rviz-plugins
+
