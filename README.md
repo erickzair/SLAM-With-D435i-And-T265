@@ -17,12 +17,9 @@ If you don't have a ROS1 distribution you can install it through the following l
 ### Installation:
 The D435i & T265 cameras allow to perform SLAM (mapping and localization) To perform 3D SLAM with both cameras, using the odometry of the T265 and the RGBD of the D435i camera, the following packages must be installed: 
 
-**Intel Realsense:** [GitHub IntelRealsense Ros](https://github.com/IntelRealSense/realsense-ros/tree/ros1-legacy).
-
-**imu_filter_madgwick:** ```sudo apt-get install ros-kinetic-imu-filter-madgwick```.
-
-**rtabmap_ros:** ```sudo apt-get install ros-kinetic-rtabmap-ros```.
-
-**robot_localization:** ```sudo apt-get install ros-kinetic-robot-localization```.
+-**Intel Realsense:** [GitHub IntelRealsense Ros](https://github.com/IntelRealSense/realsense-ros/tree/ros1-legacy).
+-**imu_filter_madgwick:** ```sudo apt-get install ros-kinetic-imu-filter-madgwick```.
+-**rtabmap_ros:** ```sudo apt-get install ros-kinetic-rtabmap-ros```.
+-**robot_localization:** ```sudo apt-get install ros-kinetic-robot-localization```.
 
 
