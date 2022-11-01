@@ -1,0 +1,98 @@
+<launch>
+  <arg name="device_type_camera1"    		default="t265"/>
+  <arg name="device_type_camera2"    		default="d435i"/>		<!-- Note: using regular expression. match D435, D435i, D415... -->
+  <arg name="serial_no_camera1"         default="944222110267"/>
+  <arg name="serial_no_camera2"    	default="102422072481"/>
+  <arg name="camera1"                   default="t265"/>
+  <arg name="camera2"              	default="d435i"/>
+  <arg name="tf_prefix_camera1"         default="$(arg camera1)"/>
+  <arg name="tf_prefix_camera2"         default="$(arg camera2)"/>
+  <arg name="initial_reset"             default="false"/>
+  <arg name="reconnect_timeout"         default="6.0"/>
+  <arg name="enable_fisheye"            default="false"/>
+  <arg name="color_width"               default="640"/>
+  <arg name="color_height"              default="480"/>
+  <arg name="depth_width"               default="640"/>
+  <arg name="depth_height"              default="480"/>
+  <arg name="clip_distance"             default="-5"/>
+  <arg name="calib_odom_file"           default=""/>
+
+  <group ns="$(arg camera1)">
+    <include file="$(find realsense2_camera)/launch/includes/nodelet.launch_t265.xml">
+      <arg name="device_type"           value="$(arg device_type_camera1)"/>
+      <arg name="tf_prefix"         	value="$(arg tf_prefix_camera1)"/>
+      <arg name="unite_imu_method"      value="linear_interpolation"/>
+      <arg name="initial_reset"         value="$(arg initial_reset)"/>
+      <arg name="reconnect_timeout"     value="$(arg reconnect_timeout)"/>
+      <arg name="topic_odom_in"         value="/t265/odom_in"/>
+      <arg name="enable_fisheye1"       value="$(arg enable_fisheye)"/>
+      <arg name="enable_fisheye2"       value="$(arg enable_fisheye)"/>
+    </include>
+  </group>
+
+  <group ns="$(arg camera2)">
+    <include file="$(find realsense2_camera)/launch/includes/nodelet.launch_d435i.xml">
+      <arg name="device_type"           value="$(arg device_type_camera2)"/>
+      <arg name="unite_imu_method"      value="linear_interpolation"/>
+      <arg name="serial_no"             value="$(arg serial_no_camera2)"/>
+      <arg name="reconnect_timeout"     value="$(arg reconnect_timeout)"/>
+      <arg name="align_depth"           value="true"/>
+      <arg name="linear_accel_cov"      value="1.0"/>
+      <arg name="initial_reset"         value="false"/>
+      <arg name="filters"               value="pointcloud"/>  
+      <arg name="color_width"           value="$(arg color_width)"/>
+      <arg name="color_height"          value="$(arg color_height)"/>
+      <arg name="depth_width"           value="$(arg depth_width)"/>
+      <arg name="depth_height"          value="$(arg depth_height)"/>
+      <arg name="clip_distance"         value="$(arg clip_distance)"/>
+      
+    </include>
+  </group>
+
+   
+  <node pkg="tf" type="static_transform_publisher" name="color_to_t265" args="0 0.01 0.03 0 0 0 /$(arg tf_prefix_camera1)_link /d435i_link 100"/>
+
+
+   <include file="$(find rtabmap_ros)/launch/rtabmap.launch">
+	<arg name="use_sim_time"            value="false"/>
+        <arg name="args" value="--delete_db_on_start --RGBD/LoopClosureReextractFeatures true --Vis/MinIniliers 10"/>
+        <arg name="rgb_topic" value="/$(arg camera2)/color/image_raw"/>
+        <arg name="depth_topic" value="/$(arg camera2)/aligned_depth_to_color/image_raw"/>
+	<arg name="frame_id" value="$(arg camera1)_link"/>
+        <arg name="camera_info_topic" value="/$(arg camera2)/color/camera_info"/>
+        <arg name="depth_camera_info_topic" value="/$(arg camera2)/depth/camera_info"/>
+        <arg name="rtabmapviz" value="false"/>
+        <arg name="rviz" value="true"/>  
+	<arg name="odom_topic" value="/t265/odom/sample"/>
+  	<arg name="visual_odometry"          value="false"/>          <!-- Launch rtabmap visual odometry node -->
+
+    </include> 
+
+    <include file="$(find robot_localization)/launch/ukf_template.launch"/>
+    <param name="/ukf_se/frequency" value="300"/>
+    <param name="/ukf_se/base_link_frame" value="$(arg camera1)_link"/>
+    <param name="/ukf_se/odom0" value="/t265/odom/sample"/>
+    <rosparam param="/ukf_se/odom0_config">[true,true,true,
+                                            true,true,true,
+                                            true,true,true,
+                                            true,true,true,
+                                            true,true,true]
+    </rosparam>
+    <param name="/ukf_se/odom0_relative" value="true"/>
+    <param name="/ukf_se/odom0_pose_rejection_threshold" value="10000000"/>
+    <param name="/ukf_se/odom0_twist_rejection_threshold" value="10000000"/>
+    
+    <param name="/ukf_se/imu0" value="/imu/data"/>
+    <rosparam param="/ukf_se/imu0_config">[false, false, false,
+                                           true,  true,  true,
+                                           true,  true,  true,
+                                           true,  true,  true,
+                                           true,  true,  true]
+    </rosparam>
+    <param name="/ukf_se/imu0_differential" value="false"/>
+    <param name="/ukf_se/imu0_relative" value="false"/>
+    <param name="/ukf_se/use_control" value="false"/>
+    <param name="/ukf_se/odom0_config" value="{true,true,true,}"/>
+
+
+</launch>
