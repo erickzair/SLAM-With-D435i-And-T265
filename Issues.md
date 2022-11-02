@@ -47,13 +47,13 @@ To install gedit:
 `sudo apt install gedit`
 
 ### 3. If you have the problem:
-Camera only extract the point cloud but is not mapping, you must
+Camera only extract the point cloud but is not mapping, you can put the following in the terminal:
 
 `cd ~/catkin_ws/src/realsense-ros/realsense2_camera/launch`
 
 `sudo gedit opensource_tracking.launch`
 
-Change the line: 
+And change the line: 
 
 `<arg name="args" value="--delete_db_on_start"/>`
 
@@ -66,3 +66,11 @@ To:
 You have to install octomap rviz plugins:
 `sudo apt-get install ros-kinetic-octomap-rviz-plugins`
 
+### 5. If you have the problem:
+Err:8 http://realsense-hw-public.s3.amazonaws.com/Debian/apt-repo xenial InRelease
+  403  Forbidden [IP: 52.218.21.49 80]
+Reading package lists... Done                     
+E: Failed to fetch http://realsense-hw-public.s3.amazonaws.com/Debian/apt-repo/dists/xenial/InRelease  403  Forbidden [IP: ""]
+E: The repository 'http://realsense-hw-public.s3.amazonaws.com/Debian/apt-repo xenial InRelease' is not signed.
+
+You have to open the app "Software & Updates", go to "Other Software" and remove http://realsense-hw-public.s3.amazonaws.com/Debian/apt-repo
