@@ -1,4 +1,4 @@
-///1. If you have the problem:
+###1. If you have the problem:
 
 CMake Error at /opt/ros/melodic/share/catkin/cmake/catkinConfig.cmake:83 (find_package):
   Could not find a package configuration file provided by
@@ -21,7 +21,7 @@ And if you are using another version of ROS you can try to change the version wo
 `sudo apt-get install ros-kinetic-ddynamic-reconfigure`
 
 
-///2. If you have the problem:
+###2. If you have the problem:
  
 You can see the image in realsense-viewer but you can't see any on rviz and present the next message:
 
@@ -46,7 +46,7 @@ sudo gedit /opt/ros/melodic/share/realsense2_camera/launch/rs_camera.launch
 To install gedit:
 `sudo apt install gedit`
 
-///3. If you only extract the point cloud but is not mapping:
+###3. If you only extract the point cloud but is not mapping:
 
 `cd ~/catkin_ws/src/realsense-ros/realsense2_camera/launch`
 
@@ -59,7 +59,7 @@ Change the line:
 To:
 `<arg name="args" value="--delete_db_on_start --RGBD/LoopClosureReextractFeatures true --Vis/MinIniliers 10"/>`
 
-///4. To resolve issue:
+###4. If you have the problem:
 [ERROR] [1663441379.166610446]: PluginlibFactory: The plugin for class 'octomap_rviz_plugin/ColorOccupancyGrid' failed to load.  Error: According to the loaded plugin descriptions the class octomap_rviz_plugin/ColorOccupancyGrid with base class type rviz::Display does not exist. Declared types are  rtabmap_ros/Info rtabmap_ros/MapCloud rtabmap_ros/MapGraph rviz/Axes rviz/Camera rviz/DepthCloud rviz/Effort rviz/FluidPressure rviz/Grid rviz/GridCells rviz/Illuminance rviz/Image rviz/InteractiveMarkers rviz/LaserScan rviz/Map rviz/Marker rviz/MarkerArray rviz/Odometry rviz/Path rviz/PointCloud rviz/PointCloud2 rviz/PointStamped rviz/Polygon rviz/Pose rviz/PoseArray rviz/PoseWithCovariance rviz/Range rviz/RelativeHumidity rviz/RobotModel rviz/TF rviz/Temperature rviz/WrenchStamped rviz_plugin_tutorials/Imu
 
 You have to install octomap rviz plugins:
