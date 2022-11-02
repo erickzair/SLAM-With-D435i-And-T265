@@ -1,5 +1,5 @@
 # SLAM-With-D435i-And-T265
-SLAM 3D With RealSense™ Cameras D435i &amp; T265 
+SLAM 3D With RealSense™ Cameras D435i &amp; T265 in the Turtlebot2
 
 ## First Steps
 This tutorial is based on the melodic ROS1 distribution for ubuntu 18.04 LTS
