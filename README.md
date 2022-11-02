@@ -32,7 +32,7 @@ First you must change the permissions of the folder `config` of the path `/opt/r
 
 - For this, use the command `cd /opt/ros/melodic/share/rtabmap_ros/launch/` and after use the command `sudo chmod 777 config/*` and now inside of the path `/opt/ros/melodic/share/rtabmap_ros/launch/config/` put the file **[rgbd.rviz](config/rgbd.rviz)** found in this repository in the folder [**config**](config) once this is done you can put the permissions back with the commands `cd ..` and `chmod 644 config/*`
 
-**Note:** _If you do not change this file you will not be able to display the map correctly_
+**Note:** ***If you do not change this file you will not be able to display the map correctly***
 
 
 
