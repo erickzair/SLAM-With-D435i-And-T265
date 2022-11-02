@@ -18,12 +18,12 @@ You can solve this with the next line in terminal:
 
 And if you are using another version of ROS you can try to change the version word, for example:
 
-sudo apt-get install ros-kinetic-ddynamic-reconfigure
+`sudo apt-get install ros-kinetic-ddynamic-reconfigure`
 
 
-2. To resolve issue:
+2. If you have the problem:
  
-Using realsense d435i ubuntu 18.04 and ros melodic, if you can see the image in realsense-viewer but you can't see any on rviz and present the next msg:
+You can see the image in realsense-viewer but you can't see any on rviz and present the next message:
 
 23/04 18:13:47,017 WARNING [140493716674304] (messenger-libusb.cpp:42) control_transfer returned error, index: 768, error: Resource temporarily unavailable, number: 11
 
@@ -46,20 +46,22 @@ sudo gedit /opt/ros/melodic/share/realsense2_camera/launch/rs_camera.launch
 To install gedit:
 `sudo apt install gedit`
 
-3. Si solo extrae la nube de puntos del mapa actual pero no mapea:
- If only extract pointcloud bat not mapping
+3. If you only extract the point cloud but is not mapping:
 
-Se debe ir a catkin_ws/src/realsense-ros/realsense2_camera/launch
+`cd ~/catkin_ws/src/realsense-ros/realsense2_camera/launch`
 
-Abrir desde terminal y sudo gedit opensource_tracking.launch
+`sudo gedit opensource_tracking.launch`
 
-Cambiar la linea: <arg name="args" value="--delete_db_on_start"/>
+Change the line: 
 
-Por:
-<arg name="args" value="--delete_db_on_start --RGBD/LoopClosureReextractFeatures true --Vis/MinIniliers 10"/>
+`<arg name="args" value="--delete_db_on_start"/>`
 
-4. [ERROR] [1663441379.166610446]: PluginlibFactory: The plugin for class 'octomap_rviz_plugin/ColorOccupancyGrid' failed to load.  Error: According to the loaded plugin descriptions the class octomap_rviz_plugin/ColorOccupancyGrid with base class type rviz::Display does not exist. Declared types are  rtabmap_ros/Info rtabmap_ros/MapCloud rtabmap_ros/MapGraph rviz/Axes rviz/Camera rviz/DepthCloud rviz/Effort rviz/FluidPressure rviz/Grid rviz/GridCells rviz/Illuminance rviz/Image rviz/InteractiveMarkers rviz/LaserScan rviz/Map rviz/Marker rviz/MarkerArray rviz/Odometry rviz/Path rviz/PointCloud rviz/PointCloud2 rviz/PointStamped rviz/Polygon rviz/Pose rviz/PoseArray rviz/PoseWithCovariance rviz/Range rviz/RelativeHumidity rviz/RobotModel rviz/TF rviz/Temperature rviz/WrenchStamped rviz_plugin_tutorials/Imu
+To:
+`<arg name="args" value="--delete_db_on_start --RGBD/LoopClosureReextractFeatures true --Vis/MinIniliers 10"/>`
 
-Para solucionar este error se debe instalar octomap rviz plugins, de la siguiente forma:
-sudo apt-get install ros-kinetic-octomap-rviz-plugins
+4. To resolve issue:
+[ERROR] [1663441379.166610446]: PluginlibFactory: The plugin for class 'octomap_rviz_plugin/ColorOccupancyGrid' failed to load.  Error: According to the loaded plugin descriptions the class octomap_rviz_plugin/ColorOccupancyGrid with base class type rviz::Display does not exist. Declared types are  rtabmap_ros/Info rtabmap_ros/MapCloud rtabmap_ros/MapGraph rviz/Axes rviz/Camera rviz/DepthCloud rviz/Effort rviz/FluidPressure rviz/Grid rviz/GridCells rviz/Illuminance rviz/Image rviz/InteractiveMarkers rviz/LaserScan rviz/Map rviz/Marker rviz/MarkerArray rviz/Odometry rviz/Path rviz/PointCloud rviz/PointCloud2 rviz/PointStamped rviz/Polygon rviz/Pose rviz/PoseArray rviz/PoseWithCovariance rviz/Range rviz/RelativeHumidity rviz/RobotModel rviz/TF rviz/Temperature rviz/WrenchStamped rviz_plugin_tutorials/Imu
+
+You have to install octomap rviz plugins:
+`sudo apt-get install ros-kinetic-octomap-rviz-plugins`
 
