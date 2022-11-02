@@ -67,8 +67,8 @@ You have to install octomap rviz plugins:
 `sudo apt-get install ros-kinetic-octomap-rviz-plugins`
 
 ### 5. If you have the problem:
-Err:8 http://realsense-hw-public.s3.amazonaws.com/Debian/apt-repo xenial InRelease
-  403  Forbidden [IP: 52.218.21.49 80]
+Err:8 (http://realsense-hw-public.s3.amazonaws.com/Debian/apt-repo) xenial InRelease
+  403  Forbidden [IP: ""]
 Reading package lists... Done                     
 E: Failed to fetch http://realsense-hw-public.s3.amazonaws.com/Debian/apt-repo/dists/xenial/InRelease  403  Forbidden [IP: ""]
 E: The repository 'http://realsense-hw-public.s3.amazonaws.com/Debian/apt-repo xenial InRelease' is not signed.
