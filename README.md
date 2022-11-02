@@ -22,12 +22,15 @@ The D435i & T265 cameras allow to perform SLAM (mapping and localization) To per
 - **rtabmap_ros:** ```sudo apt-get install ros-kinetic-rtabmap-ros```.
 - **robot_localization:** ```sudo apt-get install ros-kinetic-robot-localization```.
 
+If you had some issue you can check solutions to possible errors in the file [Issues](/issues.md)
+
 ## Configuration:
 Now with all the packages installed, changes must be made so that SLAM can work correctly with both cameras.
 
 ### Rviz:
 First you must change the permissions of the folder `config` of the path `/opt/ros/melodic/share/rtabmap_ros/launch/`.
-Can be done with the command `sudo chmod 777 config` and now inside of the path `/opt/ros/melodic/share/rtabmap_ros/launch/config/`
+Can be done with the command `sudo chmod 777 config` and now inside of the path `/opt/ros/melodic/share/rtabmap_ros/launch/config/` put the file  
+**rgbd.rviz** in the folder 
 
 
 ### Mounting:
