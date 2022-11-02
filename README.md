@@ -28,8 +28,8 @@ If you had some issue you can check solutions to possible errors in the file [Is
 Now with all the packages installed, changes must be made so that SLAM can work correctly with both cameras.
 
 ### Rviz:
-First you must change the permissions of the folder `config` of the path `/opt/ros/melodic/share/rtabmap_ros/launch/`.
-Can be done with the command `sudo chmod 777 config` and now inside of the path `/opt/ros/melodic/share/rtabmap_ros/launch/config/` put the file  
+First you must change the permissions of the folder `config` of the path `/opt/ros/melodic/share/rtabmap_ros/launch/`
+it can be done with the command `sudo chmod 777 config` and now inside of the path `/opt/ros/melodic/share/rtabmap_ros/launch/config/` put the file  
 **[rgbd.rviz](config/rgbd.rviz)** found in this repository in the folder [**config**](config)
 
 
