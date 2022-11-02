@@ -1,6 +1,6 @@
 <launch>
   <arg name="device_type_camera1"    		default="t265"/>
-  <arg name="device_type_camera2"    		default="d435i"/>		<!-- Note: using regular expression. match D435, D435i, D415... -->
+  <arg name="device_type_camera2"    		default="d435i"/>		
   <arg name="serial_no_camera1"         default=""/>				<!-- Write the serial number of your camera T265 -->
   <arg name="serial_no_camera2"    	default=""/>				<!-- Write the serial number of your camera D435i -->
   <arg name="camera1"                   default="t265"/>
