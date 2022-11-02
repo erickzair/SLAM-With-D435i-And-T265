@@ -51,8 +51,8 @@ Camera only extract the point cloud but is not mapping, you can put the followin
 
 ```
 cd ~/catkin_ws/src/realsense-ros/realsense2_camera/launch
-sudo gedit opensource_tracking.launch```
-
+sudo gedit opensource_tracking.launch
+```
 And change the line: 
 
 `<arg name="args" value="--delete_db_on_start"/>`
