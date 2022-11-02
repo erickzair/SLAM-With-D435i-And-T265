@@ -56,6 +56,7 @@
    <include file="$(find rtabmap_ros)/launch/rtabmap.launch">
 	<arg name="use_sim_time"            value="false"/>
         <arg name="args" value="--delete_db_on_start --RGBD/LoopClosureReextractFeatures true --Vis/MinIniliers 10"/>
+	<arg name="rviz_cfg"                value="$(find rtabmap_ros)/launch/config/rgbdD&T.rviz" />
         <arg name="rgb_topic" value="/$(arg camera2)/color/image_raw"/>
         <arg name="depth_topic" value="/$(arg camera2)/aligned_depth_to_color/image_raw"/>
 	<arg name="frame_id" value="$(arg camera1)_link"/>
