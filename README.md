@@ -39,7 +39,7 @@ First you must change the permissions of the folder `config` of the path `/opt/r
 ### Mounting:
 
 For the "static transfer publisher" node to work correctly, the distance of the cameras in the assembly must be taken into account.
-The STL of the design made based on [Intel mount](https://github.com/IntelRealSense/realsense-ros/blob/dd97d1ff5b428b06d268c8eb8516d1e4a8bc24a4/realsense2_camera/meshes/mount_t265_d435.stl) is shared into the folder (mountingD&T)(/mountingD&T) in this repository, this montage is modified to be used in the turlebot 2.
+The STL of the design made based on [Intel mount](https://github.com/IntelRealSense/realsense-ros/blob/dd97d1ff5b428b06d268c8eb8516d1e4a8bc24a4/realsense2_camera/meshes/mount_t265_d435.stl) is shared into the folder (MountingD&T)(/mountingD&T) in this repository, this montage is modified to be used in the turlebot 2.
 
 ![WhatsApp Image 2022-11-01 at 4 55 19 PM](https://user-images.githubusercontent.com/72427631/199349398-6d90fa47-6077-4862-a1e4-9969ef8fb596.jpeg)
 
