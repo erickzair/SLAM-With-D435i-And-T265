@@ -3,6 +3,8 @@
     <include unless="$(arg offline)" 
         file="$(find realsense2_camera)/launch/rs_camera.launch">
         <arg name="align_depth" value="true"/>
+	<arg name="publish_odom_tf"     value="true"/>
+	
         <arg name="linear_accel_cov" value="1.0"/>
         <arg name="unite_imu_method" value="linear_interpolation"/>
     </include>
@@ -15,7 +17,8 @@
     </node>
 
     <include file="$(find rtabmap_ros)/launch/rtabmap.launch">
-        <arg name="args" value="--delete_db_on_start --RGBD/LoopClosureReextractFeatures true --Vis/MinIniliers 15"/>
+        <arg name="args" value="--delete_db_on_start --RGBD/LoopClosureReextractFeatures true --Vis/MinIniliers 10"/>
+  	<arg name="rviz_cfg"                value="$(find rtabmap_ros)/launch/config/rgbd435.rviz" />
         <arg name="rgb_topic" value="/camera/color/image_raw"/>
         <arg name="depth_topic" value="/camera/aligned_depth_to_color/image_raw"/>
         <arg name="camera_info_topic" value="/camera/color/camera_info"/>
