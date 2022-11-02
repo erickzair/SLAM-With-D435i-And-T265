@@ -41,7 +41,7 @@ Second ticket:
 https://github.com/IntelRealSense/realsense-ros/issues/1758
 
 You can modify it with:
-sudo gedit /opt/ros/melodic/share/realsense2_camera/launch/rs_camera.launch
+`sudo gedit /opt/ros/melodic/share/realsense2_camera/launch/rs_camera.launch`
 
 To install gedit:
 `sudo apt install gedit`
@@ -49,9 +49,9 @@ To install gedit:
 ### 3. If you have the problem:
 Camera only extract the point cloud but is not mapping, you can put the following in the terminal:
 
-`cd ~/catkin_ws/src/realsense-ros/realsense2_camera/launch`
-
-`sudo gedit opensource_tracking.launch`
+```
+cd ~/catkin_ws/src/realsense-ros/realsense2_camera/launch
+sudo gedit opensource_tracking.launch```
 
 And change the line: 
 
