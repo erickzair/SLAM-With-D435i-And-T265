@@ -1,4 +1,4 @@
-### 1. If you have the problem:
+### 1. If you have the error:
 
 CMake Error at /opt/ros/melodic/share/catkin/cmake/catkinConfig.cmake:83 (find_package):
   Could not find a package configuration file provided by
@@ -60,14 +60,14 @@ And change the line:
 To:
 `<arg name="args" value="--delete_db_on_start --RGBD/LoopClosureReextractFeatures true --Vis/MinIniliers 10"/>`
 
-### 4. If you have the problem:
+### 4. If you have the error:
 [ERROR] [1663441379.166610446]: PluginlibFactory: The plugin for class 'octomap_rviz_plugin/ColorOccupancyGrid' failed to load.  Error: According to the loaded plugin descriptions the class octomap_rviz_plugin/ColorOccupancyGrid with base class type rviz::Display does not exist. Declared types are  rtabmap_ros/Info rtabmap_ros/MapCloud rtabmap_ros/MapGraph rviz/Axes rviz/Camera rviz/DepthCloud rviz/Effort rviz/FluidPressure rviz/Grid rviz/GridCells rviz/Illuminance rviz/Image rviz/InteractiveMarkers rviz/LaserScan rviz/Map rviz/Marker rviz/MarkerArray rviz/Odometry rviz/Path rviz/PointCloud rviz/PointCloud2 rviz/PointStamped rviz/Polygon rviz/Pose rviz/PoseArray rviz/PoseWithCovariance rviz/Range rviz/RelativeHumidity rviz/RobotModel rviz/TF rviz/Temperature rviz/WrenchStamped rviz_plugin_tutorials/Imu
 
 You have to install octomap rviz plugins:
 `sudo apt-get install ros-kinetic-octomap-rviz-plugins`
 
-### 5. If you have the problem:
-Err:8 (http://realsense-hw-public.s3.amazonaws.com/Debian/apt-repo) xenial InRelease
+### 5. If you have the error:
+Err:8 http://realsense-hw-public.s3.amazonaws.com/Debian/apt-repo xenial InRelease
   403  Forbidden [IP: ""]
 Reading package lists... Done                     
 E: Failed to fetch http://realsense-hw-public.s3.amazonaws.com/Debian/apt-repo/dists/xenial/InRelease  403  Forbidden [IP: ""]
