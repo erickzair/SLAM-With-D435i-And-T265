@@ -41,15 +41,28 @@ First you must change the permissions of the folder `config` of the path `/opt/r
 For the "static transfer publisher" node to work correctly, the distance of the cameras in the assembly must be taken into account.
 The STL of the design made based on [Intel mount](https://github.com/IntelRealSense/realsense-ros/blob/dd97d1ff5b428b06d268c8eb8516d1e4a8bc24a4/realsense2_camera/meshes/mount_t265_d435.stl) is shared into the folder [MountingD&T](MountingD&T/MountingD435i&T265.stl) in this repository, this montage is modified to be used in the turlebot 2.
 
-![WhatsApp Image 2022-11-01 at 4 55 19 PM](https://user-images.githubusercontent.com/72427631/199349398-6d90fa47-6077-4862-a1e4-9969ef8fb596.jpeg)
 
+![TF](https://user-images.githubusercontent.com/72427631/199650200-2b55a6b4-60c0-486c-909e-c3cdc45cecca.png)
+
+
+
+With the D435i camera, the Depth topics, Point Cloud Topics, and RGB Topics from which the map cloud is extracted are used to perform the mapping
+
+![Nube de puntos CAM REALSENSE D435i](https://user-images.githubusercontent.com/72427631/199648223-b0eb740d-a4ee-4bc2-b6e4-ca33e2e8b9be.gif)
+
+And with the T265 camera, the odometry topics that are used for the location in the mapping are obtained.
+
+
+### Maping:
+
+
+
+https://user-images.githubusercontent.com/72427631/199648919-c6c4ea6b-da2e-44ca-ada5-723b1a2fa7ca.mp4
 
 
 
 
 ### Saving:
-
-### 
 
 
 
