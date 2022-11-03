@@ -55,7 +55,7 @@ And with the T265 camera, the odometry topics that are used for the location in 
 
 ### Maping:
 
-To start mapping you must connect the two cameras in 3.0 ports, and after having everything connected and mounted on the turtlebot2 you must open the launch with the command:
+To start mapping you must connect the two cameras in 3.0 ports (this is obligatory), and after having everything connected and mounted on the turtlebot2 you must open the launch with the command:
 
 
 **If everything is configured correctly RVIZ should open and start mapping at the starting point**
