@@ -88,7 +88,7 @@ rosbag play NAME_ROS_BAG.bag --clock
 To save the 2D map of what has already been mapped use the command:
 `rosrun map_server map_saver map:=/rtabmap/grid_map -f my_map_1 --occ 90 --free 10`
 
-![my_map_2](https://user-images.githubusercontent.com/72427631/199768868-48e4d2c6-df42-4ae3-9645-d05f0062e74f.PNG)
+![my_map_2](https://user-images.githubusercontent.com/72427631/199769783-8bfb7d54-93d4-432d-b32f-eced447b134f.jpg)
 
 To save the 3D point cloud use the command:
 `rosrun pcl_ros pointcloud_to_pcd input:=/rtabmap/cloud_map`
