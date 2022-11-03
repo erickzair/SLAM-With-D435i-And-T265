@@ -54,7 +54,7 @@ And with the T265 camera, the odometry topics that are used for the location in 
 
 ### Using TurtleBot 2
 
-To use the TurtleBot 2 for navigation you have to go to the next link: [Turtlebot 2 on Ros melodic](https://github.com/gaunthan/Turtlebot2-On-Melodic) and follow the instructions for turtlebot to work on your computer. It was also verified that it works on the Raspberry Pi 3.
+To use the TurtleBot 2 for navigation you have to go to the next link: [Turtlebot 2 on Ros melodic](https://github.com/gaunthan/Turtlebot2-On-Melodic) and follow the instructions to make in work on your computer. It was also verified that it works on the Raspberry Pi 3.
 
 
 ### Mapping:
