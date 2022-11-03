@@ -52,10 +52,14 @@ With the D435i camera, the Depth topics, Point Cloud Topics, and RGB Topics from
 
 And with the T265 camera, the odometry topics that are used for the location in the mapping are obtained.
 
+### Using TurtleBot 2
 
-### Maping:
+To use the TurtleBot 2 for navigation you have to go to the next link: [Turtlebot 2 on Ros melodic](https://github.com/gaunthan/Turtlebot2-On-Melodic) and follow the instructions for turtlebot to work on your computer. It was also verified that it works on the Raspberry Pi 3.
 
-To start mapping you must connect the two cameras in 3.0 ports (this is obligatory), and after having everything connected and mounted on the turtlebot2 you must open the launch with the command:
+
+### Mapping:
+
+To start mapping you must connect the two cameras in 3.0 ports (this is mandatory), and after having everything connected and mounted on the turtlebot2 you must open the launch with the command:
 
 
 **If everything is configured correctly RVIZ should open and start mapping at the starting point**
