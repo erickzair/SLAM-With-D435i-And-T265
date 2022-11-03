@@ -72,7 +72,9 @@ https://user-images.githubusercontent.com/72427631/199746806-92fe07ae-10e0-47d8-
 
 To save the rosbag with the necessary topics once starting the mapping you must put this command in a new terminal:
 
-`rosbag record -O silla+D+T.bag /d435i/aligned_depth_to_color/camera_info  d435i/aligned_depth_to_color/image_raw /d435i/color/camera_info /d435i/color/image_raw /t265/imu /t265/imu_info /tf_static /rtabmap/odom /rtabmap/mapData /tf /rtabmap/mapPath /rtabmap/cloud_map /rtabmap/proj_map `
+```
+rosbag record -O silla+D+T.bag /d435i/aligned_depth_to_color/camera_info  d435i/aligned_depth_to_color/image_raw /d435i/color/camera_info /d435i/color/image_raw /t265/imu /t265/imu_info /tf_static /rtabmap/odom /rtabmap/mapData /tf /rtabmap/mapPath /rtabmap/cloud_map /rtabmap/proj_map 
+```
 
 and to play the rosbag file:
  - Open one terminal and put there `roscore`
