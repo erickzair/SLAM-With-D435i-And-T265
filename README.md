@@ -70,12 +70,25 @@ https://user-images.githubusercontent.com/72427631/199746806-92fe07ae-10e0-47d8-
 
 ### Saving:
 
-To save the rosbag with the necessary topics before starting the mapping you must put this command in a new terminal:
+To save the rosbag with the necessary topics once starting the mapping you must put this command in a new terminal:
 
-`rosbag`
+`rosbag record -O silla+D+T.bag /d435i/aligned_depth_to_color/camera_info  d435i/aligned_depth_to_color/image_raw /d435i/color/camera_info /d435i/color/image_raw /t265/imu /t265/imu_info /tf_static /rtabmap/odom /rtabmap/mapData /tf /rtabmap/mapPath /rtabmap/cloud_map /rtabmap/proj_map `
+
+and to play the rosbag file:
+ - Open one terminal and put there `roscore`
+ - Open another terminal and put `rviz` and open the config of rgbdD&T.rviz
+ - Put the next code:
+
+```
+roscore >/dev/null 2>&1 &
+rosparam set use_sim_time true
+rosbag play NAME_ROS_BAG.bag --clock
+```
 
 To save the 2D map of what has already been mapped use the command:
-`2D`
+`rosrun map_server map_saver map:=/rtabmap/grid_map -f my_map_1 --occ 90 --free 10`
+
+![my_map_2](https://user-images.githubusercontent.com/72427631/199768868-48e4d2c6-df42-4ae3-9645-d05f0062e74f.PNG)
 
 To save the 3D point cloud use the command:
-`3D`
+`rosrun pcl_ros pointcloud_to_pcd input:=/rtabmap/cloud_map`
