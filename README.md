@@ -55,8 +55,10 @@ And with the T265 camera, the odometry topics that are used for the location in 
 
 ### Maping:
 
+To start mapping you must connect the two cameras in 3.0 ports, and after having everything connected and mounted on the turtlebot2 you must open the launch with the command:
 
 
+**If everything is configured correctly RVIZ should open and start mapping at the starting point**
 https://user-images.githubusercontent.com/72427631/199648919-c6c4ea6b-da2e-44ca-ada5-723b1a2fa7ca.mp4
 
 
@@ -64,5 +66,12 @@ https://user-images.githubusercontent.com/72427631/199648919-c6c4ea6b-da2e-44ca-
 
 ### Saving:
 
+To save the rosbag with the necessary topics before starting the mapping you must put this command in a new terminal:
 
+`rosbag`
 
+To save the 2D map of what has already been mapped use the command:
+`2D`
+
+To save the 3D point cloud use the command:
+`3D`
