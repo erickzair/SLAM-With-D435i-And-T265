@@ -59,8 +59,12 @@ To start mapping you must connect the two cameras in 3.0 ports, and after having
 
 
 **If everything is configured correctly RVIZ should open and start mapping at the starting point**
-https://user-images.githubusercontent.com/72427631/199648919-c6c4ea6b-da2e-44ca-ada5-723b1a2fa7ca.mp4
 
+
+
+
+
+https://user-images.githubusercontent.com/72427631/199746806-92fe07ae-10e0-47d8-b7ed-1765cecafe71.mp4
 
 
 
