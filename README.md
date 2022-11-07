@@ -59,9 +59,11 @@ To use the TurtleBot 2 for navigation you have to go to the next link: [Turtlebo
 
 ### Mapping:
 
-To start mapping you must connect the two cameras in 3.0 ports (this is mandatory), and after having everything connected and mounted on the turtlebot2 you must download the launch [D435i_And_t265.launch](/D435i_And_t265.launch) and put it in the catkin workspace and after open the launch with the command:
+To start mapping you must connect the two cameras in 3.0 ports (this is mandatory), and after having everything connected and mounted on the turtlebot2 you must download the launch [D435i_And_t265.launch](/D435i_And_t265.launch) and put it in the catkin workspace `/catkin_ws/src/realsense-ros/realsense2_camera/launch` and after open the launch with the command:
 
-```roslaunch realsense2_camera D435i_And_t265.launch``` 
+```
+roslaunch realsense2_camera D435i_And_t265.launch
+``` 
 
 
 **If everything is configured correctly RVIZ should open and start mapping at the starting point**
