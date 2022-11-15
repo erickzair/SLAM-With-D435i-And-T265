@@ -1,4 +1,4 @@
-# SLAM-With-D435i-And-T265-In-Turtlebot2
+# SLAM With D435i And T265 In Turtlebot2
 SLAM 3D With RealSense™ Cameras D435i &amp; T265 in the Turtlebot2
 
 ## First Steps
